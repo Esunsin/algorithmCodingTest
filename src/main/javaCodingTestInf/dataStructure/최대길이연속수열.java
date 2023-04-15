@@ -1,9 +1,41 @@
 package main.javaCodingTestInf.dataStructure;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class 최대길이연속수열 {
     public int solution(int[] nums){
         int answer = 0;
+        Arrays.sort(nums);
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0 ; i < nums.length ; i++){
+            set.add(nums[i]);
+        }
+        int[] tmp = new int[set.size()];
+        int idx = 0;
+        for(Integer integer : set){
+            tmp[idx] = integer;
+            idx++;
+        }
+        Arrays.sort(tmp);
 
+        int count = 1;
+
+        for(int i = 0 ; i < tmp.length - 1 ; i++){
+            if((tmp[i] + 1) == tmp[i+1]){
+                count++;
+                if(answer < count)
+                    answer = count;
+            }
+            else {
+                count = 0;
+            }
+
+        }
+        if(set.size() == 1){
+            return 1;
+        }
         return answer;
     }
 
