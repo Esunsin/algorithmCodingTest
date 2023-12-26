@@ -1,5 +1,7 @@
 package main.programmers.fullSearch;
 
+import java.util.Arrays;
+
 public class 최소직사각형 {
     public int solution(int[][] sizes) {
         int answer = 1;
