@@ -31,3 +31,4 @@ public class 덧칠하기 {
         System.out.println(s.solution(8, 4, new int[]{2,3,6}));
     }
 }
+
