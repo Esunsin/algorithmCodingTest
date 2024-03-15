@@ -12,7 +12,7 @@ public class 햄버거만들기 {
             li.add(i);
             while(li.size() >= 4) {
                 int n = li.size();
-                if(!(li.get(n-1) == 1
+                if(!(li.get(n-1) == 1  
                         && li.get(n-2)==3
                         && li.get(n-3) ==2
                         && li.get(n-4)==1)) break;
